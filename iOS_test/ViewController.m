@@ -18,6 +18,7 @@
     [super viewDidLoad];
     
     NSLog(@"iOS_test");
+    NSLog(@"iOS_test2");
 }
 
 

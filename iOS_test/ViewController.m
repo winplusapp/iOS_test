@@ -18,9 +18,11 @@
     [super viewDidLoad];
     
     NSLog(@"iOS_test");
+
     
     NSString *aa=@"Ives_ios";
     NSLog(@"ives:%@",aa);
+
 }
 
 

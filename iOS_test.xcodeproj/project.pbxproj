@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EC06D112E868F3E3C5149DB /* Pods_iOS_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 887E7328DCD93BFFE096FB77 /* Pods_iOS_test.framework */; };
 		B0107663212584D900FD78A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0107662212584D900FD78A6 /* AppDelegate.m */; };
 		B0107666212584D900FD78A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0107665212584D900FD78A6 /* ViewController.m */; };
 		B0107669212584D900FD78A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0107667212584D900FD78A6 /* Main.storyboard */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3946AE8DB21EB5A397AC76D9 /* Pods-iOS_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_test.debug.xcconfig"; path = "Target Support Files/Pods-iOS_test/Pods-iOS_test.debug.xcconfig"; sourceTree = "<group>"; };
+		5AF40928C330CB4ECCC1F137 /* Pods-iOS_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_test.release.xcconfig"; path = "Target Support Files/Pods-iOS_test/Pods-iOS_test.release.xcconfig"; sourceTree = "<group>"; };
+		887E7328DCD93BFFE096FB77 /* Pods_iOS_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B010765E212584D900FD78A6 /* iOS_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0107661212584D900FD78A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0107662212584D900FD78A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC06D112E868F3E3C5149DB /* Pods_iOS_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15D9D6A42589F7BECFD492B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3946AE8DB21EB5A397AC76D9 /* Pods-iOS_test.debug.xcconfig */,
+				5AF40928C330CB4ECCC1F137 /* Pods-iOS_test.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE7C9F37B9272CBDEF314327 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				887E7328DCD93BFFE096FB77 /* Pods_iOS_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0107655212584D900FD78A6 = {
 			isa = PBXGroup;
 			children = (
 				B0107660212584D900FD78A6 /* iOS_test */,
 				B010765F212584D900FD78A6 /* Products */,
+				15D9D6A42589F7BECFD492B1 /* Pods */,
+				AE7C9F37B9272CBDEF314327 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0107677212584DB00FD78A6 /* Build configuration list for PBXNativeTarget "iOS_test" */;
 			buildPhases = (
+				F47A783DCF545FE750231FDA /* [CP] Check Pods Manifest.lock */,
 				B010765A212584D900FD78A6 /* Sources */,
 				B010765B212584D900FD78A6 /* Frameworks */,
 				B010765C212584D900FD78A6 /* Resources */,
+				35E075908D796F6AC0AA1685 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35E075908D796F6AC0AA1685 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_test/Pods-iOS_test-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_test/Pods-iOS_test-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_test/Pods-iOS_test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47A783DCF545FE750231FDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B010765A212584D900FD78A6 /* Sources */ = {
@@ -285,6 +354,7 @@
 		};
 		B0107678212584DB00FD78A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3946AE8DB21EB5A397AC76D9 /* Pods-iOS_test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +372,7 @@
 		};
 		B0107679212584DB00FD78A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF40928C330CB4ECCC1F137 /* Pods-iOS_test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
